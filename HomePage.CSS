@@ -195,6 +195,9 @@ nav li{
 	user-select: none;
 	text-decoration: none;
 }
+.Java a{
+	text-decoration: none;
+}
 .C-Sharp:active{
 	background-color:#176c17;
 }
