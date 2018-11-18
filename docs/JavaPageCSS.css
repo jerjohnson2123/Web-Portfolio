@@ -1,0 +1,198 @@
+html,body{
+	background-image: url('./images/backgrounds/black_blue_smoke.jpeg');
+	background-position:center;
+	width: 100%;
+	margin:auto;
+}
+@media screen and (min-width: 700px){
+	#wrapper{
+		width: 100%;
+		height: 100%;
+	}
+}
+@media screen and (max-width: 700px){
+	#wrapper{
+		width: 100%;
+		height: 100%;
+	}
+	.navWin{
+		padding-top: 15px;
+	}
+	.navWin{
+		font-size: 18px;
+	}
+}
+.navWin{
+	height: 100%;
+	width:0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: white;
+	overflow-x:hidden;
+	padding-top; 60px;
+	transition: 0.5s;
+}
+.navWin h1{
+	padding-left: 25px;
+	color: black;
+	text-align:left;
+	margin-top: 5px;
+}
+.navWin a{
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	display: block;
+	color: black;
+	transition: 0.3s;
+}
+.navWin a:hover{
+	color: red;
+}
+.navWin .closebtn {
+	position: absolute;
+	top: -10px;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+#menu{
+	background: rgba(0, 0, 0, .0);
+	color:white;
+	margin:auto;
+	/*background-image: url("images/menu.png");
+	background-repeat: no-repeat;
+	background-size: 90px 60px;*/
+	position:fixed;
+	top: 10px;
+	left: 20px;
+	float: left;
+	display: inline-block;
+	cursor: pointer;
+	border:none;
+	z-index: 1;
+}
+#menu:active{
+	opacity: .4;
+}
+#bar1, #bar2, #bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+header {
+	color:white;
+	background-color: black;
+	margin:auto;
+	width: 65%;
+	padding:0px;
+}
+header h1{
+	margin:auto;
+	text-align:center;
+	position: relative;
+}
+#title{
+	font-size: 75px;
+}
+#pagename{
+	color: white;
+	float: center;
+	display: inline-block;
+	margin-left: 200px;
+	font-size: 30px;
+}
+nav{
+	transform: rotate(-45deg);
+	background-color: white;
+	border: 1px solid;
+	padding: 5px;
+}
+nav li{
+	list-style-type: none;
+	display: inline-block;
+	padding-right: 100px;
+	font-size: 40px;
+	margin-left: -40px;
+}
+#wrapper{
+	/*background-image: url('./images/backgrounds/black_blue_smoke.jpeg');*/
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 65%;
+	margin: auto;
+	/*background-clip: padding-box;*/
+	overflow: hidden;
+}
+#FirstProject{
+	margin:auto;
+	background-color: gray;
+	color:white;
+	padding:20px;
+	background: rgba(0, 0, 0, .8);
+}
+#FirstProject h2{
+	text-align: center;
+}
+#Ppicture1{
+	text-align:center;
+}
+#CodeSnip1{
+	margin: auto;
+	background-color: #F0FFF0;
+	color: black;
+	width: 700px;
+	height: 300px;
+	padding: 10px;
+	overflow: scroll;
+	border: 5px gray solid;
+	border-radius: 10px;
+}
+#SecondProject{
+	margin:auto;
+	background-color: gray;
+	color:white;
+	padding:20px;
+	background: rgba(0, 0, 0, .8);
+}
+#SecondProject h2{
+	text-align: center;
+}
+#Ppicture2{
+	text-align:center;
+}
+footer{
+	background-color:white;
+	color: black;
+	font-size: 17px;
+	text-align: center;
+	position: relative;
+	margin: auto;
+	padding:1px;
+}
+footer a{
+	text-decoration: none;
+	color: black;
+}
+footer a:hover{
+	color:red;
+}
+li a:link{
+	color: blue;
+	text-decoration: none;
+}
+li a:visited{
+	color: purple;
+}
+li a:hover{
+	color: red;
+}
+li a:active{
+	color: yellow;
+}
