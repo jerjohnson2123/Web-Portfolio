@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Template One</title>
+	<link rel="stylesheet" href="CSharpCSS.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<script src="Template1_Edit.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header>
+		<div id="menu" onclick="openNav()">
+			<div id="bar1"></div>
+			<div id="bar2"></div>
+			<div id="bar3"></div>
+		</div>
+		<div id="sideNav" class="navWin">
+			<h1>Menu</h1>
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<hr>
+			<a href="HomePage.html">Home</a>
+			<a href="JavaPage.html">Java</a>
+			<a href="CSharpPage.html">C-Sharp</a>
+			<a href="CPPPage.html">CPP</a>
+			<a href="LandingWebPage.html">Web</a>
+			<a href="AboutPage.html">About</a>
+		</div>
+		<h1 id="title">C# Projects</h1>
+	</header>
+	<div id="wrapper">
+		<br><br>
+		<div id="FirstProject">
+			<h2>Tiffany's Pong</h2>
+			<p align="center">
+				This project demostrates my object-oriented programming (OOP) skills using C#.<br> It is a common game I developed using Unity called "Tiffany's Pong".<br>
+				Below you will see a snippet of code written by me as well as a button that allows you to play the game. <br>Here are the controls to play.<br><br>
+			</p>
+			<h3>Controls</h3>
+			<p align="center">
+				'w' to move up<br>'s' to move down<br>'d' to respawn pong<br> 'r' to restart
+			</p>
+			<br>
+			<p align="center">&#40Image 1.1&#41</p>
+			<div id="Ppicture1">
+				<img src="./images/PongImage.png" alt="FirstProject" width="600" height="300">
+			</div>
+			<br>
+			<div id="CodeSnip1">
+			<h2 align="center">Code Snippet <br> (Spawn Pong)</h2><hr>
+				<p> /*Created by Jerome Johnson*/<br><br>
+using System.Collections;<br>
+using System.Collections.Generic;<br>
+using UnityEngine;<br>
+using UnityEngine.UI;<br>
+using UnityEngine.SceneManagement;<br><br>
+
+public class SpawnPong : MonoBehaviour {<br><br>
+
+	&nbsp;public GameObject pong;<br>
+	&nbsp;public Vector3 spawnValues;<br>
+	&nbsp;public int pongCount;<br>
+	&nbsp;public float spawnWait;<br>
+	&nbsp;public float startWait;<br>
+	&nbsp;public Text winText;<br><br>
+
+	&nbsp;void Start(){<br>
+	&nbsp;&nbsp;	//winText.text = "";<br>
+	&nbsp;&nbsp;	//restartText.text = "";<br>
+	&nbsp;&nbsp;	StartCoroutine (Spawning ());<br>
+	&nbsp;}<br><br>
+
+	&nbsp;void Update(){<br>
+	&nbsp;&nbsp;	if (Input.GetKeyDown (KeyCode.D)) {<br>
+	&nbsp;&nbsp;&nbsp;		Destroy (GameObject.FindGameObjectWithTag ("Pong Ball"));<br>
+	&nbsp;&nbsp;&nbsp;		StartCoroutine (Spawning ());<br>
+	&nbsp;&nbsp;	}<br>
+	&nbsp;}<br><br>
+
+	&nbsp;IEnumerator OnTriggerExit(Collider other) {<br>
+	&nbsp;&nbsp;	Vector3 spawnPosition = new Vector3 (spawnValues.x, spawnValues.y, spawnValues.z);<br>
+	&nbsp;&nbsp;	Instantiate (pong, spawnPosition, transform.rotation);<br>
+	&nbsp;&nbsp;	yield return spawnWait;<br>
+	&nbsp;}<br><br>
+
+	&nbsp;IEnumerator Spawning(){<br>
+	&nbsp;&nbsp;	yield return new WaitForSeconds (startWait);<br>
+	&nbsp;&nbsp;	for (int i = 0; i < pongCount; i++) {<br>
+	&nbsp;&nbsp;&nbsp;		Vector3 spawnPosition = new Vector3 (spawnValues.x, spawnValues.y, spawnValues.z);<br>
+	&nbsp;&nbsp;&nbsp;		Instantiate (pong, spawnPosition, transform.rotation);<br>
+	&nbsp;&nbsp;&nbsp;			yield return new WaitForSeconds (spawnWait);<br>
+	&nbsp;&nbsp;	}<br>
+	&nbsp;&nbsp;	yield return new WaitForSeconds(spawnWait);<br>
+
+	&nbsp;}<br>
+}
+				</p>
+			</div>
+			<br>
+			<div id="PongLink">
+				<a href="./C_SharpDocuments/index.html"> Click here to play game </a>
+			</div>
+		</div>
+		<br>
+		<div id="SecondProject">
+			<h2>Ball Drop</h2>
+			<p align="center">
+				Here is another project demostrating my object-oriented programming (OOP) skills using C#.<br> This is also a common game I developed using Unity called "Ball Drop".<br>
+				Below you will see a snippet of code written by me as well as a button that allows you to play the game. <br>Here are the controls to play.<br><br>
+			</p>
+			<h3>Controls</h3>
+			<p align="center">
+				Left click on the mouse, near the top to select a location on where to drop the ball.
+			</p>
+			<br>
+			<p align="center">&#40Image 1.2&#41</p>
+			<div id="Ppicture2">
+				<img src="./images/ReplaceImage.jpg" alt="FirstProject" width="500" height="200">
+			</div>
+			<br>
+			<div id="CodeSnip2">
+				<h2 align="center">Code Snippet <br> (Destory ball and add points)</h2><hr>
+				<p> /*Created by Jerome Johnson*/<br><br>
+using System.Collections;<br>
+using System.Collections.Generic;<br>
+using UnityEngine;<br>
+using UnityEngine.UI;<br>
+using UnityEngine.SceneManagement;<br><br>
+
+public class SpawnPong : MonoBehaviour {<br><br>
+
+	&nbsp;public GameObject pong;<br>
+	&nbsp;public Vector3 spawnValues;<br>
+	&nbsp;public int pongCount;<br>
+	&nbsp;public float spawnWait;<br>
+	&nbsp;public float startWait;<br>
+	&nbsp;public Text winText;<br><br>
+
+	&nbsp;void Start(){<br>
+	&nbsp;&nbsp;	//winText.text = "";<br>
+	&nbsp;&nbsp;	//restartText.text = "";<br>
+	&nbsp;&nbsp;	StartCoroutine (Spawning ());<br>
+	&nbsp;}<br><br>
+
+	&nbsp;void Update(){<br>
+	&nbsp;&nbsp;	if (Input.GetKeyDown (KeyCode.D)) {<br>
+	&nbsp;&nbsp;&nbsp;		Destroy (GameObject.FindGameObjectWithTag ("Pong Ball"));<br>
+	&nbsp;&nbsp;&nbsp;		StartCoroutine (Spawning ());<br>
+	&nbsp;&nbsp;	}<br>
+	&nbsp;}<br><br>
+
+	&nbsp;IEnumerator OnTriggerExit(Collider other) {<br>
+	&nbsp;&nbsp;	Vector3 spawnPosition = new Vector3 (spawnValues.x, spawnValues.y, spawnValues.z);<br>
+	&nbsp;&nbsp;	Instantiate (pong, spawnPosition, transform.rotation);<br>
+	&nbsp;&nbsp;	yield return spawnWait;<br>
+	&nbsp;}<br><br>
+
+	&nbsp;IEnumerator Spawning(){<br>
+	&nbsp;&nbsp;	yield return new WaitForSeconds (startWait);<br>
+	&nbsp;&nbsp;	for (int i = 0; i < pongCount; i++) {<br>
+	&nbsp;&nbsp;&nbsp;		Vector3 spawnPosition = new Vector3 (spawnValues.x, spawnValues.y, spawnValues.z);<br>
+	&nbsp;&nbsp;&nbsp;		Instantiate (pong, spawnPosition, transform.rotation);<br>
+	&nbsp;&nbsp;&nbsp;			yield return new WaitForSeconds (spawnWait);<br>
+	&nbsp;&nbsp;	}<br>
+	&nbsp;&nbsp;	yield return new WaitForSeconds(spawnWait);<br>
+
+	&nbsp;}<br>
+}
+				</p>
+			</div>
+			<br>
+			<div id="BallDropLink">
+				<a href="#"> Click here to play game </a>
+			</div>
+		</div>
+	</div>
+	<footer>
+		&copy Copyright Jerome Johnson 2018<br>
+		<a href="HomePage.html">Home</a> |
+		<a href="JavaPage.html">Java</a> |
+		<a href="CSharpPage.html">C-Sharp</a> |
+		<a href="CPPPage.html">CPP</a> |
+		<a href="LandingWebPage.html">Web</a> |
+		<a href="AboutPage.html">About</a><br>
+		Contact Email: jer.johnson2123@gmail.com 
+	</footer>
+</body>
+</html>
