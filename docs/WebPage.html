@@ -59,7 +59,7 @@
 			<h2>Forms</h2>
 			<p align="center">
 				This form accepts info and has requirements for submission.
-				<form id="exForm">
+				<form id="exForm" name="exForm">
 					<h3>Example Form</h3>
 					<input type="text" name="firstname" placeholder="First Name" style="width:95%;" required>
 					<br><br>
@@ -68,7 +68,7 @@
 					<input type="email" name="email" placeholder="example@yahoo.com" style="width:95%;" required>
 					<br><br>
 					Select your Feb. Game
-					<select name="Big Feburary Games">
+					<select name="BigFeburaryGames">
 						<option value="Anthem">Anthem</option>
 						<option value="Jump Force">Jump Force</option>
 						<option value="Apex Legends">Apex Legends</option>
@@ -76,9 +76,8 @@
 						<option value="Far Cry:New Dawn">Far Cry:New Dawn</option>
 						<option value="Metro Exodus">Metro Exodus</option>
 					</select>
-					<input type="file" name="myfile" style="float:right;">
 					<br><br>
-					<button id="subBtn" type="submit" value="submit">submit</button>
+					<button id="subBtn" type="submit" onclick="display()">submit</button>
 				</form>
 			</p>
 			</div>
